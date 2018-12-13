@@ -5,8 +5,7 @@ Authors@R: c(
              person("Saras", "Windecker", email = "sm.windecker@unimelb.edu.au", role = c("aut", "cre")),
              person("Casey", "Visintin", role = "aut")
             )
-Description: A series of wrapper functions to manipulate spatial layers 
-using dgal in the terminal from within R.
+Description: A series of wrapper functions to manipulate spatial layers using dgal in the terminal from within R.
 Depends: R (>= 3.5.1)
 License: MIT + file LICENSE
 Encoding: UTF-8
