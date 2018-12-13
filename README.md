@@ -39,3 +39,7 @@ rasterize_shp('my_path/reproj_lakes.shp', 'my_path/lakes.tif',
 proximity_ras('my_path/lakes.tif', 'my_path/dist_lakes.tif')
 ```
 
+### Calculate slope
+``` r
+slope_ras('my_path/dem.img', 'my_path/slope.tif')
+```
