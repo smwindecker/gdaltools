@@ -19,19 +19,18 @@
 rasterize_shp <- function (input_file, output_file, res, ext, attribute = NULL) {
 
   if (is.null(attribute)) {
-    system(paste0("gdal_rasterize -burn 1 -tr ",
-                  res, " ", res, " -te ",
-                  paste(ext[1], ext[3], ext[2], ext[4]), " ",
-                  getwd(), "/", input_file, " ",
-                  getwd(), "/", output_file))
+    system(paste("gdal_rasterize -burn 1 -tr",
+                  res, res, "-te",
+                  ext[1], ext[3], ext[2], ext[4],
+                  input_file, output_file))
   }
 
   if (!is.null(attribute)) {
-    system(paste0("gdal_rasterize -a ", attribute, " -tr ",
-                  res, " ", res, " -te ",
-                  paste(ext[1], ext[3], ext[2], ext[4]), " ",
-                  getwd(), "/", input_file, " ",
-                  getwd(), "/", output_file))
+    system(paste("gdal_rasterize -a",
+                 attribute, "-tr",
+                 res, res, "-te",
+                 ext[1], ext[3], ext[2], ext[4],
+                 input_file, output_file))
   }
 
 }

@@ -22,6 +22,6 @@ Reproject shapefile
 \examples{
 \dontrun{
 reproj_shp('my_path/lakes.shp', 'my_path/reproj_lakes.shp',
-          crs = CRS('+proj=utm +zone=55 +south +ellps=GRS80 +units=m +no_defs'))
+          crs = '+proj=utm +zone=55 +south +ellps=GRS80 +units=m +no_defs')
 }
 }

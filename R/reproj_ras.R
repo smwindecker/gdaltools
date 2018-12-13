@@ -12,16 +12,16 @@
 #' @examples
 #' \dontrun{
 #' reproj_ras('my_path/temp.tif', 'my_path/reproj_temp.tif',
-#'           crs = CRS('+proj=utm +zone=55 +south +ellps=GRS80 +units=m +no_defs'),
+#'           crs = '+proj=utm +zone=55 +south +ellps=GRS80 +units=m +no_defs',
 #'           res = 1000,
 #'           ext = c(-58000, 764000, 5661000, 6224000))
 #' }
 reproj_ras <- function (input_file, output_file, crs, res, ext) {
 
-  system(paste0("gdalwarp -overwrite -tr ",
-                res, " ", res, " -r bilinear -t_srs '", crs, "' -te ",
-                paste(ext[1], ext[3], ext[2], ext[4]), " ",
-                getwd(), "/", input_file, " ",
-                getwd(), "/", output_file))
+  system(paste("gdalwarp -overwrite -tr",
+               res, res, "-r bilinear -t_srs",
+               paste0("'", crs, "'"),
+               "-te", ext[1], ext[3], ext[2], ext[4],
+               input_file, output_file))
 
 }

@@ -12,9 +12,9 @@
 #' }
 proximity_ras <- function (input_file, output_file) {
 
-  system(paste0("gdal_proximity.py ",
-                getwd(), "/", input_file, " ",
-                getwd(), "/", output_file,
-                " -values 1 -distunits GEO"))
+  system(paste("gdal_proximity.py",
+                input_file,
+                output_file,
+                "-values 1 -distunits GEO"))
 
 }
