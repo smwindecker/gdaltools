@@ -22,8 +22,9 @@ rasterize_shp <- function (input_file, output_file, res, ext, attribute = NULL) 
     system(paste("gdal_rasterize -burn 1 -tr",
                  res, res, "-te",
                  ext[1], ext[3], ext[2], ext[4],
-                 "'", input_file, "'",
-                 "'", output_file, "'"))
+                 paste0("'", input_file, "'"),
+                 paste0("'", output_file, "'")
+                 ))
   }
 
   if (!is.null(attribute)) {
@@ -31,8 +32,9 @@ rasterize_shp <- function (input_file, output_file, res, ext, attribute = NULL) 
                  attribute, "-tr",
                  res, res, "-te",
                  ext[1], ext[3], ext[2], ext[4],
-                 "'", input_file, "'",
-                 "'", output_file, "'"))
+                 paste0("'", input_file, "'"),
+                 paste0("'", output_file, "'")
+                 ))
   }
 
 }
