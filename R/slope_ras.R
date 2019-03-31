@@ -13,7 +13,8 @@
 slope_ras <- function (input_file, output_file) {
 
   system(paste("gdaldem slope -p",
-                input_file, output_file))
+                "'", input_file, "'",
+               "'", output_file, "'"))
 
 }
 

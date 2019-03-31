@@ -22,6 +22,6 @@ reproj_ras <- function (input_file, output_file, crs, res, ext) {
                res, res, "-r bilinear -t_srs",
                paste0("'", crs, "'"),
                "-te", ext[1], ext[3], ext[2], ext[4],
-               input_file, output_file))
-
+               "'", input_file, "'",
+               "'", output_file, "'"))
 }

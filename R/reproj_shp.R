@@ -16,7 +16,7 @@ reproj_shp <- function (input_file, output_file, crs) {
   system(paste(
     "ogr2ogr -overwrite -t_srs",
     paste0("'", crs, "'"),
-    output_file,
-    input_file
+    "'", output_file, "'",
+    "'", input_file, "'"
   ))
 }

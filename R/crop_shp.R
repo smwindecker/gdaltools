@@ -16,7 +16,7 @@ crop_shp <- function (input_file, output_file, ext) {
   system(sprintf(
     'ogr2ogr -clipsrc %s %s %s',
     paste(ext[c(1, 3, 2, 4)], collapse = " "),
-    output_file,
-    input_file
+    "'", output_file, "'",
+    "'", input_file, "'"
   ))
 }
