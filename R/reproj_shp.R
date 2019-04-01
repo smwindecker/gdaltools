@@ -13,10 +13,10 @@
 #'           crs = '+proj=utm +zone=55 +south +ellps=GRS80 +units=m +no_defs')
 #' }
 reproj_shp <- function (input_file, output_file, crs) {
-
-  system(paste("ogr2ogr -overwrite -t_srs",
-               paste0("'", crs, "'"),
-               output_file,
-               input_file))
-
+  system(paste(
+    "ogr2ogr -overwrite -t_srs",
+    paste0("'", crs, "'"),
+    paste0("'", output_file, "'"),
+    paste0("'", input_file, "'")
+  ))
 }
