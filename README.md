@@ -1,5 +1,7 @@
 # gdaltools
 
+[![DOI](https://zenodo.org/badge/161569078.svg)](https://zenodo.org/badge/latestdoi/161569078)
+
 ## Installation
 
 You can install gdaltools from Github:
